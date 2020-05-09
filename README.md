@@ -1,6 +1,6 @@
 # ReScala todomvc
 
-TODO MVC implementation in ReScala
+TODO MVC implementation in [ReScala](http://www.rescala-lang.com/manual/) + [Scalatags](https://lihaoyi.github.io/scalatags)
 
 ## Run
 ```bash
