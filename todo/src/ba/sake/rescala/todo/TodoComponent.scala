@@ -20,6 +20,10 @@ case class TodoComponent(
   private val stopEditingEvent     = Evt[Option[KeyboardEvent]]()
   private val toggleCompletedEvent = Evt[Unit]()
 
+  startEditingEvent.observe(_ => startEditing())
+  stopEditingEvent.observe(stopEditing)
+  toggleCompletedEvent.observe(_ => TodoService.toggleCompleted(todo))
+
   private val editInput = input(
     onblur := { () =>
       stopEditingEvent.fire(None)
@@ -32,19 +36,15 @@ case class TodoComponent(
   ).render
 
   def render: TypedTag[LI] = {
-    startEditingEvent.observe(_ => startEditing())
-    stopEditingEvent.observe(stopEditing)
-    toggleCompletedEvent.observe(_ => TodoService.toggleCompleted(todo))
-
     val todoName$    = Signal(span(todoVar().name))
-    val checkedAttr  = Option.when(todo.completed)("checked")
+    val isChecked    = Option.when(todo.completed)("checked")
     val completedCls = Option.when(todo.completed)("completed")
     val editingCls   = isEdit.map(v => Option.when(v)("editing"))
-    val liClasses = Signal { completedCls.getOrElse("") + " " + editingCls().getOrElse("") }
+    val liClasses    = Signal { completedCls.getOrElse("") + " " + editingCls().getOrElse("") }
 
     li(cls := liClasses)(
       div(cls := "view")(
-        input(checked := checkedAttr, onchange := { () =>
+        input(checked := isChecked, onchange := { () =>
           toggleCompletedEvent.fire()
         }, cls := "toggle", tpe := "checkbox"),
         label(ondblclick := { () =>

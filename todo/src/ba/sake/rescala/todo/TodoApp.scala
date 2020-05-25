@@ -30,7 +30,7 @@ object TodoApp {
 
     addTodoEvent.observe(addTodo)
 
-    val displayMainAndFooter = Signal { if (todos$().isEmpty) "none" else "block" }
+    val mainDisplay = Signal { if (todos$().isEmpty) "none" else "block" }
 
     val countFrag = todos$.map { todos =>
       val count      = todos.count(!_.completed)
@@ -44,7 +44,7 @@ object TodoApp {
           h1("todos"),
           addInput
         ),
-        section(cls := "main", css("display") := displayMainAndFooter)(
+        section(cls := "main", css("display") := mainDisplay)(
           input(onclick := { () =>
             TodoService.toggleAll()
           }, id := "toggle-all", cls := "toggle-all", tpe := "checkbox"),
@@ -55,7 +55,7 @@ object TodoApp {
             }.asModifierL
           )
         ),
-        footer(cls := "footer", css("display") := displayMainAndFooter)(
+        footer(cls := "footer", css("display") := mainDisplay)(
           span(cls := "todo-count")(countFrag),
           // TODO
           /*
