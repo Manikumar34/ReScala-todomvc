@@ -1,7 +1,5 @@
 package ba.sake.rescala.todo
 
-import java.util.UUID
-
 import org.scalajs.dom
 import org.scalajs.dom.ext.KeyValue
 import org.scalajs.dom.html.Input
@@ -10,133 +8,35 @@ import rescala.default._
 import rescala.extra.Tags._
 import scalatags.JsDom.all._
 
-/*
-<input>s are decoupled from its callbacks:
-- fire Evt
-- react to Evt
-*/
-
-case class Todo(name: String, completed: Boolean = false, id: UUID = UUID.randomUUID()) {
-  def toggled: Todo = copy(completed = !completed)
-}
+// <input>s are decoupled from its callbacks via Events
 
 object TodoApp {
-
   private val section = tag("section")
+  private val todos$  = TodoService.todos$
 
   def main(args: Array[String]): Unit = {
-
-    val todos$ = Var(List(Todo("Create a TodoMVC template", completed = true), Todo("Rule the web")))
-    val toggleAllState = Var(false)
-
-    /* ADD */
     val addTodoEvent = Evt[KeyboardEvent]()
-    val addInput = input(onkeyup := { (e: KeyboardEvent) => addTodoEvent.fire(e) },
-      cls := "new-todo", placeholder := "What needs to be done?", autofocus).render
+    val addInput = input(onkeyup := { (e: KeyboardEvent) =>
+      addTodoEvent.fire(e)
+    }, cls := "new-todo", placeholder := "What needs to be done?", autofocus).render
 
     def addTodo(e: KeyboardEvent): Unit = {
       val newTodoName = e.target.asInstanceOf[Input].value.trim
       if (e.key == KeyValue.Enter && newTodoName.nonEmpty) {
-        todos$.set(
-          todos$.now :+ Todo(newTodoName)
-        )
+        TodoService.add(Todo(newTodoName))
         addInput.value = ""
       }
     }
 
     addTodoEvent.observe(addTodo)
 
-    /* CLEAR COMPLETED */
-    def clearCompleted(): Unit = {
-      todos$.set(
-        todos$.now.filterNot(_.completed)
-      )
-    }
+    val displayMainAndFooter = Signal { if (todos$().isEmpty) "none" else "block" }
 
-    def toggleAll(): Unit = {
-      toggleAllState.set(!toggleAllState.now)
-      todos$.set(
-        todos$.now.map(_.copy(completed = toggleAllState.now))
-      )
-    }
-
-    def todoItem(todo: Todo) = {
-      val todoVar = Var(todo)
-      val isEdit = Var(false)
-
-      val startEditingEvent = Evt[Unit]()
-      val stopEditingEvent = Evt[Option[KeyboardEvent]]()
-      val toggleCompletedEvent = Evt[Unit]()
-
-      val editInput = input(
-        onblur := { () => stopEditingEvent.fire(None) },
-        onkeyup := { (e: KeyboardEvent) => stopEditingEvent.fire(Some(e)) },
-        value := todoVar.map(_.name),
-        cls := "edit"
-      ).render
-
-      def removeTodo(): Unit =
-        todos$.set(
-          todos$.now.filterNot(_.id == todo.id)
-        )
-
-      def startEditing(): Unit = {
-        isEdit.set(true)
-        editInput.focus()
-        editInput.selectionStart = editInput.value.length
-      }
-
-      def stopEditing(maybeKbdEvt: Option[KeyboardEvent]): Unit = {
-        if (maybeKbdEvt.nonEmpty && maybeKbdEvt.get.key != KeyValue.Enter) return
-        isEdit.set(false)
-        todos$.set {
-          val todos = todos$.now
-          val newValue = editInput.value.trim
-          if (newValue.isEmpty) todos
-          else {
-            todoVar.set(todoVar.now.copy(name = newValue))
-            val todoIdx = todos.indexWhere(_.id == todo.id)
-            todos.updated(todoIdx, todoVar.now)
-          }
-        }
-      }
-
-      def toggleCompleted(): Unit = todos$.set {
-        todos$.now.map(t => if (t.id == todo.id) todo.toggled else t)
-      }
-
-      startEditingEvent.observe { _ => startEditing() }
-      stopEditingEvent.observe(stopEditing)
-      toggleCompletedEvent.observe { _ => toggleCompleted() }
-
-
-      val todoName$ = Signal(span(todoVar().name))
-      val completedCls = Option.when(todo.completed)("completed")
-      val checkedAttr = Option.when(todo.completed)("checked")
-      val editingCls = isEdit.map { v => Option.when(v)("editing") }
-      val liClasses = Signal {
-        completedCls.getOrElse("") + " " + editingCls().getOrElse("")
-      }
-
-      li(cls := liClasses)(
-        div(cls := "view")(
-          input(checked := checkedAttr, onchange := { () => toggleCompletedEvent.fire() }, cls := "toggle", tpe := "checkbox"),
-          label(ondblclick := { () => startEditingEvent.fire() })(todoName$.asModifier),
-          button(onclick := { () => removeTodo() }, cls := "destroy")
-        ),
-        editInput
-      )
-    }
-
-    val displayMainAndFooter = Signal {
-      if (todos$().isEmpty) "none" else "block"
-    }
-
-    val bla = todos$.map { todos =>
-      val count = todos.size
+    val countFrag = todos$.map { todos =>
+      val count      = todos.count(!_.completed)
       val itemsLabel = if (count == 1) "item" else "items"
-      frag(strong("0"), s"$itemsLabel left").render
-    }
+      div(strong(count), s" $itemsLabel left")
+    }.asModifier
 
     val mainFrag = Seq(
       section(cls := "todoapp")(
@@ -145,23 +45,18 @@ object TodoApp {
           addInput
         ),
         section(cls := "main", css("display") := displayMainAndFooter)(
-          input(onclick := { () => toggleAll() }, id := "toggle-all", cls := "toggle-all", tpe := "checkbox"),
+          input(onclick := { () =>
+            TodoService.toggleAll()
+          }, id := "toggle-all", cls := "toggle-all", tpe := "checkbox"),
           label(`for` := "toggle-all", "Mark all as complete"),
           ul(cls := "todo-list")(
             todos$.map {
-              _.map(todoItem)
+              _.map(TodoComponent).map(_.render)
             }.asModifierL
           )
         ),
         footer(cls := "footer", css("display") := displayMainAndFooter)(
-          // This should be `0 items left` by default
-          span(cls := "todo-count")(
-            todos$.map { todos =>
-              val count = todos.count(!_.completed)
-              val itemsLabel = if (count == 1) "item" else "items"
-              div(strong(count), s" $itemsLabel left")
-            }.asModifier
-          ),
+          span(cls := "todo-count")(countFrag),
           // TODO
           /*
           ul(cls := "filters")(
@@ -176,7 +71,9 @@ object TodoApp {
             )
           ),
            */
-          button(onclick := { () => clearCompleted() }, cls := "clear-completed", "Clear completed")
+          button(onclick := { () =>
+            TodoService.removeCompleted()
+          }, cls := "clear-completed", "Clear completed")
         )
       ),
       footer(cls := "info")(
