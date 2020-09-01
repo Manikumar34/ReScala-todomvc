@@ -1,41 +1,39 @@
 package ba.sake.rescala.todo
 
 import org.scalajs.dom.ext.KeyValue
-import org.scalajs.dom.html.LI
 import org.scalajs.dom.raw.KeyboardEvent
 import rescala.default._
 import rescala.extra.Tags._
-import scalatags.JsDom.TypedTag
 import scalatags.JsDom.all._
+import TodoService.todos$
 
 case class TodoComponent(
     todo: Todo
 ) {
-  private val todos$ = TodoService.todos$
-
   private val todoVar = Var(todo)
   private val isEdit  = Var(false)
 
   private val startEditingEvent    = Evt[Unit]()
-  private val stopEditingEvent     = Evt[Option[KeyboardEvent]]()
+  private val stopEditingEvent     = Evt[Unit]()
   private val toggleCompletedEvent = Evt[Unit]()
 
   startEditingEvent.observe(_ => startEditing())
-  stopEditingEvent.observe(stopEditing)
+  stopEditingEvent.observe(_ => stopEditing())
   toggleCompletedEvent.observe(_ => TodoService.toggleCompleted(todo))
 
   private val editInput = input(
     onblur := { () =>
-      stopEditingEvent.fire(None)
+      stopEditingEvent.fire(())
     },
     onkeyup := { (e: KeyboardEvent) =>
-      stopEditingEvent.fire(Some(e))
+      if (e.key == KeyValue.Enter)
+        stopEditingEvent.fire(())
     },
     value := todoVar.map(_.name),
     cls := "edit"
   ).render
 
-  def render: TypedTag[LI] = {
+  def render = {
     val todoName$    = Signal(span(todoVar().name))
     val isChecked    = Option.when(todo.completed)("checked")
     val completedCls = Option.when(todo.completed)("completed")
@@ -64,8 +62,7 @@ case class TodoComponent(
     editInput.selectionStart = editInput.value.length
   }
 
-  private def stopEditing(maybeKbdEvt: Option[KeyboardEvent]): Unit = {
-    if (maybeKbdEvt.nonEmpty && maybeKbdEvt.get.key != KeyValue.Enter) return
+  private def stopEditing(): Unit = {
     isEdit.set(false)
     todos$.set {
       val todos    = todos$.now

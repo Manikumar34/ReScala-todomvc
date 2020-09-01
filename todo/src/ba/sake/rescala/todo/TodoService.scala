@@ -5,11 +5,17 @@ import java.util.UUID
 import rescala.default._
 
 object TodoService {
-  val todos$                 = Var(List(Todo("Create a TodoMVC template", completed = true), Todo("Rule the web")))
+
+  val todos$ : Var[List[Todo]] = Var(
+    List(Todo("Create a TodoMVC template", completed = true), Todo("Rule the web"))
+  )
+
   private val toggleAllState = Var(false)
 
   def add(todo: Todo): Unit =
-    todos$.set(todos$.now :+ todo)
+    todos$.set(
+      todos$.now.appended(todo)
+    )
 
   def remove(id: UUID): Unit =
     todos$.set(
