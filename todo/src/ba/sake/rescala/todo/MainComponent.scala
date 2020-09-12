@@ -23,7 +23,7 @@ object MainComponent {
 
   private val mainDisplay = Signal { if (todos$().isEmpty) "none" else "block" }
 
-  private val countFrag = todosFiltered$.map { todos =>
+  private val countFrag = todos$.map { todos =>
     val count      = todos.count(!_.completed)
     val itemsLabel = if (count == 1) "item" else "items"
     div(strong(count), s" $itemsLabel left")
