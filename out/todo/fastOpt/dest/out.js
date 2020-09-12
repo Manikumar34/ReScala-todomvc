@@ -1067,7 +1067,7 @@ function $h_Lba_sake_rescala_todo_TodoApp$() {
 }
 $h_Lba_sake_rescala_todo_TodoApp$.prototype = $c_Lba_sake_rescala_todo_TodoApp$.prototype;
 $c_Lba_sake_rescala_todo_TodoApp$.prototype.main__AT__V = (function(args) {
-  $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body.appendChild($m_Lba_sake_rescala_todo_MainComponent$().render__Lorg_scalajs_dom_raw_HTMLDivElement());
+  $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().getElementById("main").appendChild($m_Lba_sake_rescala_todo_MainComponent$().render__Lorg_scalajs_dom_raw_HTMLDivElement());
   $m_Lba_sake_scalajs\uff3frouter_Router$().apply__Lba_sake_scalajs\uff3frouter_Router().withListener__s_PartialFunction__Lba_sake_scalajs\uff3frouter_Router(new $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1())
 });
 var $d_Lba_sake_rescala_todo_TodoApp$ = new $TypeData().initClass({
