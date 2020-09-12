@@ -1,20 +1,11 @@
 package ba.sake.rescala.todo
 
-sealed trait TodoFilter {
+trait TodoFilter {
   def isValid(todo: Todo): Boolean
 }
 
 object TodoFilter {
-
-  case object All extends TodoFilter {
-    override def isValid(todo: Todo): Boolean = true
-  }
-
-  case object Completed extends TodoFilter {
-    override def isValid(todo: Todo): Boolean = todo.completed
-  }
-
-  case object Active extends TodoFilter {
-    override def isValid(todo: Todo): Boolean = !todo.completed
-  }
+  val All: TodoFilter       = todo => true
+  val Completed: TodoFilter = todo => todo.completed
+  val Active: TodoFilter    = todo => !todo.completed
 }

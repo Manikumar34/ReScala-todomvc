@@ -945,7 +945,7 @@ function $c_Lba_sake_rescala_todo_MainComponent$() {
   this.Lba_sake_rescala_todo_MainComponent$__f_countFrag = null;
   $ct_O__(this);
   $n_Lba_sake_rescala_todo_MainComponent$ = this;
-  this.Lba_sake_rescala_todo_MainComponent$__f_todoFilter = $m_Lrescala_default$().Var__Lrescala_interface_RescalaInterfaceRequireSerializer$Var$().apply__O__Lrescala_core_ReSerializable__Lrescala_core_CreationTicket__Lrescala_reactives_Var($m_Lba_sake_rescala_todo_TodoFilter$All$(), $m_Lrescala_default$().noSerialization__Lrescala_core_ReSerializable(), $m_Lrescala_core_CreationTicket$().fromEngineImplicit__Lrescala_core_Scheduler__Lrescala_core_REName__Lrescala_core_CreationTicket($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler(), $m_Lrescala_core_REName$().create__Lsourcecode_Enclosing__Lsourcecode_Line__Lrescala_core_REName(new $c_Lsourcecode_Enclosing("ba.sake.rescala.todo.MainComponent.todoFilter"), new $c_Lsourcecode_Line(13))));
+  this.Lba_sake_rescala_todo_MainComponent$__f_todoFilter = $m_Lrescala_default$().Var__Lrescala_interface_RescalaInterfaceRequireSerializer$Var$().apply__O__Lrescala_core_ReSerializable__Lrescala_core_CreationTicket__Lrescala_reactives_Var($m_Lba_sake_rescala_todo_TodoFilter$().All__Lba_sake_rescala_todo_TodoFilter(), $m_Lrescala_default$().noSerialization__Lrescala_core_ReSerializable(), $m_Lrescala_core_CreationTicket$().fromEngineImplicit__Lrescala_core_Scheduler__Lrescala_core_REName__Lrescala_core_CreationTicket($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler(), $m_Lrescala_core_REName$().create__Lsourcecode_Enclosing__Lsourcecode_Line__Lrescala_core_REName(new $c_Lsourcecode_Enclosing("ba.sake.rescala.todo.MainComponent.todoFilter"), new $c_Lsourcecode_Line(13))));
   var reactive$macro$2 = $m_Lba_sake_rescala_todo_TodoService$().todos$__Lrescala_reactives_Var();
   this.Lba_sake_rescala_todo_MainComponent$__f_todosFiltered$ = $m_Lrescala_reactives_Signals$().static__sci_Seq__F1__Lrescala_core_CreationTicket__Lrescala_reactives_Signal($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([this.todoFilter__Lrescala_reactives_Var(), reactive$macro$2]), new $c_sjsr_AnonFunction1((function(this\u00f8, reactive$macro$2) {
     return (function(ticket$macro$1$2) {
@@ -1026,7 +1026,7 @@ $c_Lba_sake_rescala_todo_MainComponent$.prototype.render__Lorg_scalajs_dom_raw_H
       var ticket$macro$1 = $as_Lrescala_core_StaticTicket(ticket$macro$1$2);
       return $p_Lba_sake_rescala_todo_MainComponent$__$anonfun$render$3__Lrescala_reactives_Signal__Lrescala_core_StaticTicket__sci_List(this$3, reactive$macro$2, ticket$macro$1)
     })
-  })(this, reactive$macro$2)), $m_Lrescala_core_CreationTicket$().fromEngineImplicit__Lrescala_core_Scheduler__Lrescala_core_REName__Lrescala_core_CreationTicket($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler(), $m_Lrescala_core_REName$().create__Lsourcecode_Enclosing__Lsourcecode_Line__Lrescala_core_REName(new $c_Lsourcecode_Enclosing("ba.sake.rescala.todo.MainComponent.render"), new $c_Lsourcecode_Line(45))))), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())]))])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().footer__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("footer", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().css__T__Lscalatags_generic_Style("display").$colon$eq__O__Lscalatags_generic_StyleValue__Lscalatags_generic_StylePair($p_Lba_sake_rescala_todo_MainComponent$__mainDisplay__Lrescala_reactives_Signal(this), $m_Lrescala_extra_Tags$().signalStyleValue__Lscalatags_generic_StyleValue__Lrescala_core_Scheduler__Lscalatags_generic_StyleValue($m_Lscalatags_JsDom$all$().stringStyle__Lscalatags_generic_StyleValue(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))])).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("todo-count", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$p_Lba_sake_rescala_todo_MainComponent$__countFrag__Lscalatags_generic_Modifier(this)])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().ul__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("filters", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().li__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().a__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().data__Lscalatags_generic_GlobalAttrs$data$().selectDynamic__T__Lscalatags_generic_GlobalAttrs$DataAttribute("navigate").$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("/", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("All"), $m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($p_Lba_sake_rescala_todo_MainComponent$__maybeSelected__Lba_sake_rescala_todo_TodoFilter__Lrescala_reactives_Signal(this, $m_Lba_sake_rescala_todo_TodoFilter$All$()), $m_Lrescala_extra_Tags$().signalAttrValue__Lscalatags_generic_AttrValue__Lrescala_core_Scheduler__Lscalatags_generic_AttrValue($m_Lrescala_extra_Tags$().optionAttrValue__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrValue($m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))]))])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().li__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().a__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().data__Lscalatags_generic_GlobalAttrs$data$().selectDynamic__T__Lscalatags_generic_GlobalAttrs$DataAttribute("navigate").$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("/active", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("Active"), $m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($p_Lba_sake_rescala_todo_MainComponent$__maybeSelected__Lba_sake_rescala_todo_TodoFilter__Lrescala_reactives_Signal(this, $m_Lba_sake_rescala_todo_TodoFilter$Active$()), $m_Lrescala_extra_Tags$().signalAttrValue__Lscalatags_generic_AttrValue__Lrescala_core_Scheduler__Lscalatags_generic_AttrValue($m_Lrescala_extra_Tags$().optionAttrValue__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrValue($m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))]))])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().li__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().a__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().data__Lscalatags_generic_GlobalAttrs$data$().selectDynamic__T__Lscalatags_generic_GlobalAttrs$DataAttribute("navigate").$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("/completed", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("Completed"), $m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($p_Lba_sake_rescala_todo_MainComponent$__maybeSelected__Lba_sake_rescala_todo_TodoFilter__Lrescala_reactives_Signal(this, $m_Lba_sake_rescala_todo_TodoFilter$Completed$()), $m_Lrescala_extra_Tags$().signalAttrValue__Lscalatags_generic_AttrValue__Lrescala_core_Scheduler__Lscalatags_generic_AttrValue($m_Lrescala_extra_Tags$().optionAttrValue__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrValue($m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))]))]))])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().button__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().onclick__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(new $c_sjsr_AnonFunction0((function(this$4) {
+  })(this, reactive$macro$2)), $m_Lrescala_core_CreationTicket$().fromEngineImplicit__Lrescala_core_Scheduler__Lrescala_core_REName__Lrescala_core_CreationTicket($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler(), $m_Lrescala_core_REName$().create__Lsourcecode_Enclosing__Lsourcecode_Line__Lrescala_core_REName(new $c_Lsourcecode_Enclosing("ba.sake.rescala.todo.MainComponent.render"), new $c_Lsourcecode_Line(45))))), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())]))])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().footer__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("footer", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().css__T__Lscalatags_generic_Style("display").$colon$eq__O__Lscalatags_generic_StyleValue__Lscalatags_generic_StylePair($p_Lba_sake_rescala_todo_MainComponent$__mainDisplay__Lrescala_reactives_Signal(this), $m_Lrescala_extra_Tags$().signalStyleValue__Lscalatags_generic_StyleValue__Lrescala_core_Scheduler__Lscalatags_generic_StyleValue($m_Lscalatags_JsDom$all$().stringStyle__Lscalatags_generic_StyleValue(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))])).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("todo-count", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$p_Lba_sake_rescala_todo_MainComponent$__countFrag__Lscalatags_generic_Modifier(this)])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().ul__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("filters", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().li__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().a__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().data__Lscalatags_generic_GlobalAttrs$data$().selectDynamic__T__Lscalatags_generic_GlobalAttrs$DataAttribute("navigate").$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("/", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("All"), $m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($p_Lba_sake_rescala_todo_MainComponent$__maybeSelected__Lba_sake_rescala_todo_TodoFilter__Lrescala_reactives_Signal(this, $m_Lba_sake_rescala_todo_TodoFilter$().All__Lba_sake_rescala_todo_TodoFilter()), $m_Lrescala_extra_Tags$().signalAttrValue__Lscalatags_generic_AttrValue__Lrescala_core_Scheduler__Lscalatags_generic_AttrValue($m_Lrescala_extra_Tags$().optionAttrValue__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrValue($m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))]))])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().li__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().a__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().data__Lscalatags_generic_GlobalAttrs$data$().selectDynamic__T__Lscalatags_generic_GlobalAttrs$DataAttribute("navigate").$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("/active", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("Active"), $m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($p_Lba_sake_rescala_todo_MainComponent$__maybeSelected__Lba_sake_rescala_todo_TodoFilter__Lrescala_reactives_Signal(this, $m_Lba_sake_rescala_todo_TodoFilter$().Active__Lba_sake_rescala_todo_TodoFilter()), $m_Lrescala_extra_Tags$().signalAttrValue__Lscalatags_generic_AttrValue__Lrescala_core_Scheduler__Lscalatags_generic_AttrValue($m_Lrescala_extra_Tags$().optionAttrValue__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrValue($m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))]))])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().li__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().a__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().data__Lscalatags_generic_GlobalAttrs$data$().selectDynamic__T__Lscalatags_generic_GlobalAttrs$DataAttribute("navigate").$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("/completed", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("Completed"), $m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($p_Lba_sake_rescala_todo_MainComponent$__maybeSelected__Lba_sake_rescala_todo_TodoFilter__Lrescala_reactives_Signal(this, $m_Lba_sake_rescala_todo_TodoFilter$().Completed__Lba_sake_rescala_todo_TodoFilter()), $m_Lrescala_extra_Tags$().signalAttrValue__Lscalatags_generic_AttrValue__Lrescala_core_Scheduler__Lscalatags_generic_AttrValue($m_Lrescala_extra_Tags$().optionAttrValue__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrValue($m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))]))]))])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().button__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().onclick__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(new $c_sjsr_AnonFunction0((function(this$4) {
     return (function() {
       $p_Lba_sake_rescala_todo_MainComponent$__$anonfun$render$6__V(this$4)
     })
@@ -1095,6 +1095,71 @@ function $isArrayOf_Lba_sake_rescala_todo_TodoFilter(obj, depth) {
 }
 function $asArrayOf_Lba_sake_rescala_todo_TodoFilter(obj, depth) {
   return (($isArrayOf_Lba_sake_rescala_todo_TodoFilter(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lba.sake.rescala.todo.TodoFilter;", depth))
+}
+function $p_Lba_sake_rescala_todo_TodoFilter$__$anonfun$All$1__Lba_sake_rescala_todo_Todo__Z($thiz, todo) {
+  return true
+}
+function $p_Lba_sake_rescala_todo_TodoFilter$__$anonfun$Completed$1__Lba_sake_rescala_todo_Todo__Z($thiz, todo) {
+  return todo.completed__Z()
+}
+function $p_Lba_sake_rescala_todo_TodoFilter$__$anonfun$Active$1__Lba_sake_rescala_todo_Todo__Z($thiz, todo) {
+  return (!todo.completed__Z())
+}
+/** @constructor */
+function $c_Lba_sake_rescala_todo_TodoFilter$() {
+  this.Lba_sake_rescala_todo_TodoFilter$__f_All = null;
+  this.Lba_sake_rescala_todo_TodoFilter$__f_Completed = null;
+  this.Lba_sake_rescala_todo_TodoFilter$__f_Active = null;
+  $ct_O__(this);
+  $n_Lba_sake_rescala_todo_TodoFilter$ = this;
+  this.Lba_sake_rescala_todo_TodoFilter$__f_All = new $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1((function(this\u00f8) {
+    return (function(todo$2) {
+      var todo = $as_Lba_sake_rescala_todo_Todo(todo$2);
+      return $p_Lba_sake_rescala_todo_TodoFilter$__$anonfun$All$1__Lba_sake_rescala_todo_Todo__Z(this\u00f8, todo)
+    })
+  })(this));
+  this.Lba_sake_rescala_todo_TodoFilter$__f_Completed = new $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2((function(this$2) {
+    return (function(todo$4$2) {
+      var todo$4 = $as_Lba_sake_rescala_todo_Todo(todo$4$2);
+      return $p_Lba_sake_rescala_todo_TodoFilter$__$anonfun$Completed$1__Lba_sake_rescala_todo_Todo__Z(this$2, todo$4)
+    })
+  })(this));
+  this.Lba_sake_rescala_todo_TodoFilter$__f_Active = new $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3((function(this$3) {
+    return (function(todo$5$2) {
+      var todo$5 = $as_Lba_sake_rescala_todo_Todo(todo$5$2);
+      return $p_Lba_sake_rescala_todo_TodoFilter$__$anonfun$Active$1__Lba_sake_rescala_todo_Todo__Z(this$3, todo$5)
+    })
+  })(this))
+}
+$c_Lba_sake_rescala_todo_TodoFilter$.prototype = new $h_O();
+$c_Lba_sake_rescala_todo_TodoFilter$.prototype.constructor = $c_Lba_sake_rescala_todo_TodoFilter$;
+/** @constructor */
+function $h_Lba_sake_rescala_todo_TodoFilter$() {
+  /*<skip>*/
+}
+$h_Lba_sake_rescala_todo_TodoFilter$.prototype = $c_Lba_sake_rescala_todo_TodoFilter$.prototype;
+$c_Lba_sake_rescala_todo_TodoFilter$.prototype.All__Lba_sake_rescala_todo_TodoFilter = (function() {
+  return this.Lba_sake_rescala_todo_TodoFilter$__f_All
+});
+$c_Lba_sake_rescala_todo_TodoFilter$.prototype.Completed__Lba_sake_rescala_todo_TodoFilter = (function() {
+  return this.Lba_sake_rescala_todo_TodoFilter$__f_Completed
+});
+$c_Lba_sake_rescala_todo_TodoFilter$.prototype.Active__Lba_sake_rescala_todo_TodoFilter = (function() {
+  return this.Lba_sake_rescala_todo_TodoFilter$__f_Active
+});
+var $d_Lba_sake_rescala_todo_TodoFilter$ = new $TypeData().initClass({
+  Lba_sake_rescala_todo_TodoFilter$: 0
+}, false, "ba.sake.rescala.todo.TodoFilter$", {
+  Lba_sake_rescala_todo_TodoFilter$: 1,
+  O: 1
+});
+$c_Lba_sake_rescala_todo_TodoFilter$.prototype.$classData = $d_Lba_sake_rescala_todo_TodoFilter$;
+var $n_Lba_sake_rescala_todo_TodoFilter$ = (void 0);
+function $m_Lba_sake_rescala_todo_TodoFilter$() {
+  if ((!$n_Lba_sake_rescala_todo_TodoFilter$)) {
+    $n_Lba_sake_rescala_todo_TodoFilter$ = new $c_Lba_sake_rescala_todo_TodoFilter$()
+  };
+  return $n_Lba_sake_rescala_todo_TodoFilter$
 }
 function $p_Lba_sake_rescala_todo_TodoService$__toggleAllState__Lrescala_reactives_Var($thiz) {
   return $thiz.Lba_sake_rescala_todo_TodoService$__f_toggleAllState
@@ -7541,6 +7606,78 @@ function $h_Lsourcecode_SourceValue() {
   /*<skip>*/
 }
 $h_Lsourcecode_SourceValue.prototype = $c_Lsourcecode_SourceValue.prototype;
+/** @constructor */
+function $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1(f) {
+  this.Lba_sake_rescala_todo_TodoFilter$$$Lambda$1__f_f = null;
+  this.Lba_sake_rescala_todo_TodoFilter$$$Lambda$1__f_f = f;
+  $ct_O__(this)
+}
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1.prototype = new $h_O();
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1.prototype.constructor = $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1;
+/** @constructor */
+function $h_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1() {
+  /*<skip>*/
+}
+$h_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1.prototype = $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1.prototype;
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1.prototype.isValid__Lba_sake_rescala_todo_Todo__Z = (function(todo$3) {
+  return $uZ((0, this.Lba_sake_rescala_todo_TodoFilter$$$Lambda$1__f_f)(todo$3))
+});
+var $d_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1 = new $TypeData().initClass({
+  Lba_sake_rescala_todo_TodoFilter$$$Lambda$1: 0
+}, false, "ba.sake.rescala.todo.TodoFilter$$$Lambda$1", {
+  Lba_sake_rescala_todo_TodoFilter$$$Lambda$1: 1,
+  O: 1,
+  Lba_sake_rescala_todo_TodoFilter: 1
+});
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1.prototype.$classData = $d_Lba_sake_rescala_todo_TodoFilter$$$Lambda$1;
+/** @constructor */
+function $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2(f) {
+  this.Lba_sake_rescala_todo_TodoFilter$$$Lambda$2__f_f = null;
+  this.Lba_sake_rescala_todo_TodoFilter$$$Lambda$2__f_f = f;
+  $ct_O__(this)
+}
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2.prototype = new $h_O();
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2.prototype.constructor = $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2;
+/** @constructor */
+function $h_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2() {
+  /*<skip>*/
+}
+$h_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2.prototype = $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2.prototype;
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2.prototype.isValid__Lba_sake_rescala_todo_Todo__Z = (function(todo$3) {
+  return $uZ((0, this.Lba_sake_rescala_todo_TodoFilter$$$Lambda$2__f_f)(todo$3))
+});
+var $d_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2 = new $TypeData().initClass({
+  Lba_sake_rescala_todo_TodoFilter$$$Lambda$2: 0
+}, false, "ba.sake.rescala.todo.TodoFilter$$$Lambda$2", {
+  Lba_sake_rescala_todo_TodoFilter$$$Lambda$2: 1,
+  O: 1,
+  Lba_sake_rescala_todo_TodoFilter: 1
+});
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2.prototype.$classData = $d_Lba_sake_rescala_todo_TodoFilter$$$Lambda$2;
+/** @constructor */
+function $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3(f) {
+  this.Lba_sake_rescala_todo_TodoFilter$$$Lambda$3__f_f = null;
+  this.Lba_sake_rescala_todo_TodoFilter$$$Lambda$3__f_f = f;
+  $ct_O__(this)
+}
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3.prototype = new $h_O();
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3.prototype.constructor = $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3;
+/** @constructor */
+function $h_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3() {
+  /*<skip>*/
+}
+$h_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3.prototype = $c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3.prototype;
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3.prototype.isValid__Lba_sake_rescala_todo_Todo__Z = (function(todo$3) {
+  return $uZ((0, this.Lba_sake_rescala_todo_TodoFilter$$$Lambda$3__f_f)(todo$3))
+});
+var $d_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3 = new $TypeData().initClass({
+  Lba_sake_rescala_todo_TodoFilter$$$Lambda$3: 0
+}, false, "ba.sake.rescala.todo.TodoFilter$$$Lambda$3", {
+  Lba_sake_rescala_todo_TodoFilter$$$Lambda$3: 1,
+  O: 1,
+  Lba_sake_rescala_todo_TodoFilter: 1
+});
+$c_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3.prototype.$classData = $d_Lba_sake_rescala_todo_TodoFilter$$$Lambda$3;
 /** @constructor */
 function $c_jl_Boolean$() {
   $ct_O__(this);
@@ -19280,7 +19417,7 @@ function $h_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1() {
 $h_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1.prototype = $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1.prototype;
 $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1.prototype.applyOrElse__T__F1__O = (function(x1, default\u00f8) {
   var x1$2 = x1;
-  return ($is("/active", x1$2) ? ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$Active$(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), (void 0)) : ($is("/completed", x1$2) ? ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$Completed$(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), (void 0)) : ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$All$(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), (void 0))))
+  return ($is("/active", x1$2) ? ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$().Active__Lba_sake_rescala_todo_TodoFilter(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), (void 0)) : ($is("/completed", x1$2) ? ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$().Completed__Lba_sake_rescala_todo_TodoFilter(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), (void 0)) : ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$().All__Lba_sake_rescala_todo_TodoFilter(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), (void 0))))
 });
 $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1.prototype.isDefinedAt__T__Z = (function(x1) {
   var x1$2 = x1;
@@ -19303,165 +19440,6 @@ var $d_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1 = new $TypeData().initClass
   Ljava_io_Serializable: 1
 });
 $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1.prototype.$classData = $d_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1;
-/** @constructor */
-function $c_Lba_sake_rescala_todo_TodoFilter$Active$() {
-  $ct_O__(this);
-  $n_Lba_sake_rescala_todo_TodoFilter$Active$ = this;
-  $f_s_Product__$init$__V(this)
-}
-$c_Lba_sake_rescala_todo_TodoFilter$Active$.prototype = new $h_O();
-$c_Lba_sake_rescala_todo_TodoFilter$Active$.prototype.constructor = $c_Lba_sake_rescala_todo_TodoFilter$Active$;
-/** @constructor */
-function $h_Lba_sake_rescala_todo_TodoFilter$Active$() {
-  /*<skip>*/
-}
-$h_Lba_sake_rescala_todo_TodoFilter$Active$.prototype = $c_Lba_sake_rescala_todo_TodoFilter$Active$.prototype;
-$c_Lba_sake_rescala_todo_TodoFilter$Active$.prototype.isValid__Lba_sake_rescala_todo_Todo__Z = (function(todo) {
-  return (!todo.completed__Z())
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Active$.prototype.productPrefix__T = (function() {
-  return "Active"
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Active$.prototype.productArity__I = (function() {
-  return 0
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Active$.prototype.productElement__I__O = (function(x$1) {
-  var x1 = x$1;
-  return $s_sr_Statics__ioobe__I__O(x$1)
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Active$.prototype.productIterator__sc_Iterator = (function() {
-  return $m_sr_ScalaRunTime$().typedProductIterator__s_Product__sc_Iterator(this)
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Active$.prototype.hashCode__I = (function() {
-  return 1955883814
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Active$.prototype.toString__T = (function() {
-  return "Active"
-});
-var $d_Lba_sake_rescala_todo_TodoFilter$Active$ = new $TypeData().initClass({
-  Lba_sake_rescala_todo_TodoFilter$Active$: 0
-}, false, "ba.sake.rescala.todo.TodoFilter$Active$", {
-  Lba_sake_rescala_todo_TodoFilter$Active$: 1,
-  O: 1,
-  Lba_sake_rescala_todo_TodoFilter: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Active$.prototype.$classData = $d_Lba_sake_rescala_todo_TodoFilter$Active$;
-var $n_Lba_sake_rescala_todo_TodoFilter$Active$ = (void 0);
-function $m_Lba_sake_rescala_todo_TodoFilter$Active$() {
-  if ((!$n_Lba_sake_rescala_todo_TodoFilter$Active$)) {
-    $n_Lba_sake_rescala_todo_TodoFilter$Active$ = new $c_Lba_sake_rescala_todo_TodoFilter$Active$()
-  };
-  return $n_Lba_sake_rescala_todo_TodoFilter$Active$
-}
-/** @constructor */
-function $c_Lba_sake_rescala_todo_TodoFilter$All$() {
-  $ct_O__(this);
-  $n_Lba_sake_rescala_todo_TodoFilter$All$ = this;
-  $f_s_Product__$init$__V(this)
-}
-$c_Lba_sake_rescala_todo_TodoFilter$All$.prototype = new $h_O();
-$c_Lba_sake_rescala_todo_TodoFilter$All$.prototype.constructor = $c_Lba_sake_rescala_todo_TodoFilter$All$;
-/** @constructor */
-function $h_Lba_sake_rescala_todo_TodoFilter$All$() {
-  /*<skip>*/
-}
-$h_Lba_sake_rescala_todo_TodoFilter$All$.prototype = $c_Lba_sake_rescala_todo_TodoFilter$All$.prototype;
-$c_Lba_sake_rescala_todo_TodoFilter$All$.prototype.isValid__Lba_sake_rescala_todo_Todo__Z = (function(todo) {
-  return true
-});
-$c_Lba_sake_rescala_todo_TodoFilter$All$.prototype.productPrefix__T = (function() {
-  return "All"
-});
-$c_Lba_sake_rescala_todo_TodoFilter$All$.prototype.productArity__I = (function() {
-  return 0
-});
-$c_Lba_sake_rescala_todo_TodoFilter$All$.prototype.productElement__I__O = (function(x$1) {
-  var x1 = x$1;
-  return $s_sr_Statics__ioobe__I__O(x$1)
-});
-$c_Lba_sake_rescala_todo_TodoFilter$All$.prototype.productIterator__sc_Iterator = (function() {
-  return $m_sr_ScalaRunTime$().typedProductIterator__s_Product__sc_Iterator(this)
-});
-$c_Lba_sake_rescala_todo_TodoFilter$All$.prototype.hashCode__I = (function() {
-  return 65921
-});
-$c_Lba_sake_rescala_todo_TodoFilter$All$.prototype.toString__T = (function() {
-  return "All"
-});
-var $d_Lba_sake_rescala_todo_TodoFilter$All$ = new $TypeData().initClass({
-  Lba_sake_rescala_todo_TodoFilter$All$: 0
-}, false, "ba.sake.rescala.todo.TodoFilter$All$", {
-  Lba_sake_rescala_todo_TodoFilter$All$: 1,
-  O: 1,
-  Lba_sake_rescala_todo_TodoFilter: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lba_sake_rescala_todo_TodoFilter$All$.prototype.$classData = $d_Lba_sake_rescala_todo_TodoFilter$All$;
-var $n_Lba_sake_rescala_todo_TodoFilter$All$ = (void 0);
-function $m_Lba_sake_rescala_todo_TodoFilter$All$() {
-  if ((!$n_Lba_sake_rescala_todo_TodoFilter$All$)) {
-    $n_Lba_sake_rescala_todo_TodoFilter$All$ = new $c_Lba_sake_rescala_todo_TodoFilter$All$()
-  };
-  return $n_Lba_sake_rescala_todo_TodoFilter$All$
-}
-/** @constructor */
-function $c_Lba_sake_rescala_todo_TodoFilter$Completed$() {
-  $ct_O__(this);
-  $n_Lba_sake_rescala_todo_TodoFilter$Completed$ = this;
-  $f_s_Product__$init$__V(this)
-}
-$c_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype = new $h_O();
-$c_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype.constructor = $c_Lba_sake_rescala_todo_TodoFilter$Completed$;
-/** @constructor */
-function $h_Lba_sake_rescala_todo_TodoFilter$Completed$() {
-  /*<skip>*/
-}
-$h_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype = $c_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype;
-$c_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype.isValid__Lba_sake_rescala_todo_Todo__Z = (function(todo) {
-  return todo.completed__Z()
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype.productPrefix__T = (function() {
-  return "Completed"
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype.productArity__I = (function() {
-  return 0
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype.productElement__I__O = (function(x$1) {
-  var x1 = x$1;
-  return $s_sr_Statics__ioobe__I__O(x$1)
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype.productIterator__sc_Iterator = (function() {
-  return $m_sr_ScalaRunTime$().typedProductIterator__s_Product__sc_Iterator(this)
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype.hashCode__I = (function() {
-  return 601036331
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype.toString__T = (function() {
-  return "Completed"
-});
-var $d_Lba_sake_rescala_todo_TodoFilter$Completed$ = new $TypeData().initClass({
-  Lba_sake_rescala_todo_TodoFilter$Completed$: 0
-}, false, "ba.sake.rescala.todo.TodoFilter$Completed$", {
-  Lba_sake_rescala_todo_TodoFilter$Completed$: 1,
-  O: 1,
-  Lba_sake_rescala_todo_TodoFilter: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lba_sake_rescala_todo_TodoFilter$Completed$.prototype.$classData = $d_Lba_sake_rescala_todo_TodoFilter$Completed$;
-var $n_Lba_sake_rescala_todo_TodoFilter$Completed$ = (void 0);
-function $m_Lba_sake_rescala_todo_TodoFilter$Completed$() {
-  if ((!$n_Lba_sake_rescala_todo_TodoFilter$Completed$)) {
-    $n_Lba_sake_rescala_todo_TodoFilter$Completed$ = new $c_Lba_sake_rescala_todo_TodoFilter$Completed$()
-  };
-  return $n_Lba_sake_rescala_todo_TodoFilter$Completed$
-}
 function $ct_Ljava_io_FilterOutputStream__Ljava_io_OutputStream__($thiz, out) {
   $thiz.Ljava_io_FilterOutputStream__f_out = out;
   $ct_Ljava_io_OutputStream__($thiz);
