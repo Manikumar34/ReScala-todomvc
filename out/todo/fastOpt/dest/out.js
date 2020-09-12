@@ -1164,28 +1164,63 @@ function $m_Lba_sake_rescala_todo_TodoFilter$() {
 function $p_Lba_sake_rescala_todo_TodoService$__toggleAllState__Lrescala_reactives_Var($thiz) {
   return $thiz.Lba_sake_rescala_todo_TodoService$__f_toggleAllState
 }
-function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$remove$1__ju_UUID__Lba_sake_rescala_todo_Todo__Z($thiz, id$1, x$1) {
-  var x = x$1.id__ju_UUID();
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$add$1__Lba_sake_rescala_todo_Todo__sci_List__sci_List($thiz, todo$1, x$1) {
+  return $as_sci_List(x$1.appended__O__O(todo$1))
+}
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$remove$2__ju_UUID__Lba_sake_rescala_todo_Todo__Z($thiz, id$1, x$3) {
+  var x = x$3.id__ju_UUID();
   var x$2 = id$1;
   return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
 }
-function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$removeCompleted$1__Lba_sake_rescala_todo_Todo__Z($thiz, x$2) {
-  return x$2.completed__Z()
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$remove$1__ju_UUID__sci_List__sci_List($thiz, id$1, x$2) {
+  return x$2.filterNot__F1__sci_List(new $c_sjsr_AnonFunction1((function(this\u00f8, id$1) {
+    return (function(x$3$2) {
+      var x$3 = $as_Lba_sake_rescala_todo_Todo(x$3$2);
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$remove$2__ju_UUID__Lba_sake_rescala_todo_Todo__Z(this\u00f8, id$1, x$3)
+    })
+  })($thiz, id$1)))
 }
-function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleCompleted$1__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo($thiz, todo$1, t) {
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$removeCompleted$2__Lba_sake_rescala_todo_Todo__Z($thiz, x$5) {
+  return x$5.completed__Z()
+}
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$removeCompleted$1__sci_List__sci_List($thiz, x$4) {
+  return x$4.filterNot__F1__sci_List(new $c_sjsr_AnonFunction1((function(this\u00f8) {
+    return (function(x$5$2) {
+      var x$5 = $as_Lba_sake_rescala_todo_Todo(x$5$2);
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$removeCompleted$2__Lba_sake_rescala_todo_Todo__Z(this\u00f8, x$5)
+    })
+  })($thiz)))
+}
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleCompleted$2__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo($thiz, todo$2, t) {
   var x = t.id__ju_UUID();
-  var x$2 = todo$1.id__ju_UUID();
+  var x$2 = todo$2.id__ju_UUID();
   if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
-    return todo$1.toggled__Lba_sake_rescala_todo_Todo()
+    return todo$2.toggled__Lba_sake_rescala_todo_Todo()
   } else {
     return t
   }
 }
-function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$1__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo($thiz, x$3) {
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleCompleted$1__Lba_sake_rescala_todo_Todo__sci_List__sci_List($thiz, todo$2, x$6) {
+  return x$6.map__F1__sci_List(new $c_sjsr_AnonFunction1((function(this\u00f8, todo$2) {
+    return (function(t$2) {
+      var t = $as_Lba_sake_rescala_todo_Todo(t$2);
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleCompleted$2__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo(this\u00f8, todo$2, t)
+    })
+  })($thiz, todo$2)))
+}
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$2__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo($thiz, x$8) {
   var x$1 = $uZ($p_Lba_sake_rescala_todo_TodoService$__toggleAllState__Lrescala_reactives_Var($m_Lba_sake_rescala_todo_TodoService$()).now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()));
-  var x$2 = x$3.copy$default$1__T();
-  var x$3$2 = x$3.copy$default$3__ju_UUID();
-  return x$3.copy__T__Z__ju_UUID__Lba_sake_rescala_todo_Todo(x$2, x$1, x$3$2)
+  var x$2 = x$8.copy$default$1__T();
+  var x$3 = x$8.copy$default$3__ju_UUID();
+  return x$8.copy__T__Z__ju_UUID__Lba_sake_rescala_todo_Todo(x$2, x$1, x$3)
+}
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$1__sci_List__sci_List($thiz, x$7) {
+  return x$7.map__F1__sci_List(new $c_sjsr_AnonFunction1((function(this\u00f8) {
+    return (function(x$8$2) {
+      var x$8 = $as_Lba_sake_rescala_todo_Todo(x$8$2);
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$2__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo(this\u00f8, x$8)
+    })
+  })($thiz)))
 }
 /** @constructor */
 function $c_Lba_sake_rescala_todo_TodoService$() {
@@ -1207,40 +1242,45 @@ $c_Lba_sake_rescala_todo_TodoService$.prototype.todos$__Lrescala_reactives_Var =
   return this.Lba_sake_rescala_todo_TodoService$__f_todos$
 });
 $c_Lba_sake_rescala_todo_TodoService$.prototype.add__Lba_sake_rescala_todo_Todo__V = (function(todo) {
-  this.todos$__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($as_sc_StrictOptimizedSeqOps(this.todos$__Lrescala_reactives_Var().now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())).appended__O__O(todo), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
+  this.todos$__Lrescala_reactives_Var().transform__F1__Lrescala_core_Scheduler__V(new $c_sjsr_AnonFunction1((function(this\u00f8, todo) {
+    return (function(x$1$2) {
+      var x$1 = $as_sci_List(x$1$2);
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$add$1__Lba_sake_rescala_todo_Todo__sci_List__sci_List(this\u00f8, todo, x$1)
+    })
+  })(this, todo)), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
 });
 $c_Lba_sake_rescala_todo_TodoService$.prototype.remove__ju_UUID__V = (function(id) {
-  this.todos$__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($as_sci_List(this.todos$__Lrescala_reactives_Var().now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())).filterNot__F1__sci_List(new $c_sjsr_AnonFunction1((function(this\u00f8, id) {
-    return (function(x$1$2) {
-      var x$1 = $as_Lba_sake_rescala_todo_Todo(x$1$2);
-      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$remove$1__ju_UUID__Lba_sake_rescala_todo_Todo__Z(this\u00f8, id, x$1)
+  this.todos$__Lrescala_reactives_Var().transform__F1__Lrescala_core_Scheduler__V(new $c_sjsr_AnonFunction1((function(this\u00f8, id) {
+    return (function(x$2$2) {
+      var x$2 = $as_sci_List(x$2$2);
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$remove$1__ju_UUID__sci_List__sci_List(this\u00f8, id, x$2)
     })
-  })(this, id))), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
+  })(this, id)), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
 });
 $c_Lba_sake_rescala_todo_TodoService$.prototype.removeCompleted__V = (function() {
-  this.todos$__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($as_sci_List(this.todos$__Lrescala_reactives_Var().now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())).filterNot__F1__sci_List(new $c_sjsr_AnonFunction1((function(this\u00f8) {
-    return (function(x$2$2) {
-      var x$2 = $as_Lba_sake_rescala_todo_Todo(x$2$2);
-      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$removeCompleted$1__Lba_sake_rescala_todo_Todo__Z(this\u00f8, x$2)
+  this.todos$__Lrescala_reactives_Var().transform__F1__Lrescala_core_Scheduler__V(new $c_sjsr_AnonFunction1((function(this\u00f8) {
+    return (function(x$4$2) {
+      var x$4 = $as_sci_List(x$4$2);
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$removeCompleted$1__sci_List__sci_List(this\u00f8, x$4)
     })
-  })(this))), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
+  })(this)), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
 });
 $c_Lba_sake_rescala_todo_TodoService$.prototype.toggleCompleted__Lba_sake_rescala_todo_Todo__V = (function(todo) {
-  this.todos$__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($as_sci_List(this.todos$__Lrescala_reactives_Var().now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())).map__F1__sci_List(new $c_sjsr_AnonFunction1((function(this\u00f8, todo) {
-    return (function(t$2) {
-      var t = $as_Lba_sake_rescala_todo_Todo(t$2);
-      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleCompleted$1__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo(this\u00f8, todo, t)
+  this.todos$__Lrescala_reactives_Var().transform__F1__Lrescala_core_Scheduler__V(new $c_sjsr_AnonFunction1((function(this\u00f8, todo) {
+    return (function(x$6$2) {
+      var x$6 = $as_sci_List(x$6$2);
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleCompleted$1__Lba_sake_rescala_todo_Todo__sci_List__sci_List(this\u00f8, todo, x$6)
     })
-  })(this, todo))), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
+  })(this, todo)), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
 });
 $c_Lba_sake_rescala_todo_TodoService$.prototype.toggleAll__V = (function() {
   $p_Lba_sake_rescala_todo_TodoService$__toggleAllState__Lrescala_reactives_Var(this).set__O__Lrescala_core_Scheduler__V((!$uZ($p_Lba_sake_rescala_todo_TodoService$__toggleAllState__Lrescala_reactives_Var(this).now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler());
-  this.todos$__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($as_sci_List(this.todos$__Lrescala_reactives_Var().now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())).map__F1__sci_List(new $c_sjsr_AnonFunction1((function(this\u00f8) {
-    return (function(x$3$2) {
-      var x$3 = $as_Lba_sake_rescala_todo_Todo(x$3$2);
-      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$1__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo(this\u00f8, x$3)
+  this.todos$__Lrescala_reactives_Var().transform__F1__Lrescala_core_Scheduler__V(new $c_sjsr_AnonFunction1((function(this\u00f8) {
+    return (function(x$7$2) {
+      var x$7 = $as_sci_List(x$7$2);
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$1__sci_List__sci_List(this\u00f8, x$7)
     })
-  })(this))), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
+  })(this)), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
 });
 var $d_Lba_sake_rescala_todo_TodoService$ = new $TypeData().initClass({
   Lba_sake_rescala_todo_TodoService$: 0
@@ -16111,27 +16151,12 @@ function $p_Lba_sake_rescala_todo_TodoComponent__startEditing__V($thiz) {
 }
 function $p_Lba_sake_rescala_todo_TodoComponent__stopEditing__V($thiz) {
   $p_Lba_sake_rescala_todo_TodoComponent__isEdit__Lrescala_reactives_Var($thiz).set__O__Lrescala_core_Scheduler__V(false, $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler());
-  var $$x3 = $m_Lba_sake_rescala_todo_TodoService$().todos$__Lrescala_reactives_Var();
-  var todos = $as_sci_List($m_Lba_sake_rescala_todo_TodoService$().todos$__Lrescala_reactives_Var().now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()));
-  var newValue = $f_T__trim__T($as_T($p_Lba_sake_rescala_todo_TodoComponent__editInput__Lorg_scalajs_dom_raw_HTMLInputElement($thiz).value));
-  if ($f_T__isEmpty__Z(newValue)) {
-    var $$x1 = todos
-  } else {
-    var $$x2 = $p_Lba_sake_rescala_todo_TodoComponent__todoVar__Lrescala_reactives_Var($thiz);
-    var qual$1 = $as_Lba_sake_rescala_todo_Todo($p_Lba_sake_rescala_todo_TodoComponent__todoVar__Lrescala_reactives_Var($thiz).now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()));
-    var x$1 = newValue;
-    var x$2 = qual$1.copy$default$2__Z();
-    var x$3 = qual$1.copy$default$3__ju_UUID();
-    $$x2.set__O__Lrescala_core_Scheduler__V(qual$1.copy__T__Z__ju_UUID__Lba_sake_rescala_todo_Todo(x$1, x$2, x$3), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler());
-    var todoIdx = todos.indexWhere__F1__I(new $c_sjsr_AnonFunction1((function(this\u00f8) {
-      return (function(x$5$2) {
-        var x$5 = $as_Lba_sake_rescala_todo_Todo(x$5$2);
-        return $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$stopEditing$1__Lba_sake_rescala_todo_Todo__Z(this\u00f8, x$5)
-      })
-    })($thiz)));
-    var $$x1 = todos.updated__I__O__sci_List(todoIdx, $p_Lba_sake_rescala_todo_TodoComponent__todoVar__Lrescala_reactives_Var($thiz).now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))
-  };
-  $$x3.set__O__Lrescala_core_Scheduler__V($$x1, $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
+  $m_Lba_sake_rescala_todo_TodoService$().todos$__Lrescala_reactives_Var().transform__F1__Lrescala_core_Scheduler__V(new $c_sjsr_AnonFunction1((function(this\u00f8) {
+    return (function(todos$2) {
+      var todos = $as_sci_List(todos$2);
+      return $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$stopEditing$1__sci_List__sci_List(this\u00f8, todos)
+    })
+  })($thiz)), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
 }
 function $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$new$1__jl_Void__V($thiz, x$1) {
   $p_Lba_sake_rescala_todo_TodoComponent__startEditing__V($thiz)
@@ -16229,10 +16254,33 @@ function $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$render$14__V($thiz) {
 function $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$render$15__F0__sjs_js_Function0($thiz, f) {
   return $m_sjs_js_Any$().fromFunction0__F0__sjs_js_Function0(f)
 }
-function $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$stopEditing$1__Lba_sake_rescala_todo_Todo__Z($thiz, x$5) {
-  var x = x$5.id__ju_UUID();
+function $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$stopEditing$2__T__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo($thiz, newValue$1, x$5) {
+  return x$5.copy__T__Z__ju_UUID__Lba_sake_rescala_todo_Todo(newValue$1, x$5.copy$default$2__Z(), x$5.copy$default$3__ju_UUID())
+}
+function $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$stopEditing$3__Lba_sake_rescala_todo_Todo__Z($thiz, x$6) {
+  var x = x$6.id__ju_UUID();
   var x$2 = $thiz.todo__Lba_sake_rescala_todo_Todo().id__ju_UUID();
   return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+}
+function $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$stopEditing$1__sci_List__sci_List($thiz, todos) {
+  var newValue = $f_T__trim__T($as_T($p_Lba_sake_rescala_todo_TodoComponent__editInput__Lorg_scalajs_dom_raw_HTMLInputElement($thiz).value));
+  if ($f_T__isEmpty__Z(newValue)) {
+    return todos
+  } else {
+    $p_Lba_sake_rescala_todo_TodoComponent__todoVar__Lrescala_reactives_Var($thiz).transform__F1__Lrescala_core_Scheduler__V(new $c_sjsr_AnonFunction1((function(this\u00f8, newValue) {
+      return (function(x$5$2) {
+        var x$5 = $as_Lba_sake_rescala_todo_Todo(x$5$2);
+        return $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$stopEditing$2__T__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo(this\u00f8, newValue, x$5)
+      })
+    })($thiz, newValue)), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler());
+    var todoIdx = todos.indexWhere__F1__I(new $c_sjsr_AnonFunction1((function(this$2) {
+      return (function(x$6$2) {
+        var x$6 = $as_Lba_sake_rescala_todo_Todo(x$6$2);
+        return $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$stopEditing$3__Lba_sake_rescala_todo_Todo__Z(this$2, x$6)
+      })
+    })($thiz)));
+    return todos.updated__I__O__sci_List(todoIdx, $p_Lba_sake_rescala_todo_TodoComponent__todoVar__Lrescala_reactives_Var($thiz).now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))
+  }
 }
 /** @constructor */
 function $c_Lba_sake_rescala_todo_TodoComponent(todo) {
@@ -25325,18 +25373,6 @@ function $f_sc_StrictOptimizedSeqOps__appended__O__O($thiz, elem) {
 function $f_sc_StrictOptimizedSeqOps__$init$__V($thiz) {
   /*<skip>*/
 }
-function $is_sc_StrictOptimizedSeqOps(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.sc_StrictOptimizedSeqOps)))
-}
-function $as_sc_StrictOptimizedSeqOps(obj) {
-  return (($is_sc_StrictOptimizedSeqOps(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.collection.StrictOptimizedSeqOps"))
-}
-function $isArrayOf_sc_StrictOptimizedSeqOps(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.sc_StrictOptimizedSeqOps)))
-}
-function $asArrayOf_sc_StrictOptimizedSeqOps(obj, depth) {
-  return (($isArrayOf_sc_StrictOptimizedSeqOps(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.collection.StrictOptimizedSeqOps;", depth))
-}
 function $f_sci_Iterable__iterableFactory__sc_IterableFactory($thiz) {
   return $m_sci_Iterable$()
 }
@@ -26750,6 +26786,9 @@ $c_Lrescala_reactives_SignalImpl.prototype.interpret__O__O = (function(v) {
 function $p_Lrescala_reactives_Var__$anonfun$set$1__O__Lrescala_core_AdmissionTicket__V($thiz, value$2, x$3) {
   $thiz.admit__O__Lrescala_core_AdmissionTicket__V(value$2, x$3)
 }
+function $p_Lrescala_reactives_Var__$anonfun$transform$1__F1__Lrescala_core_AdmissionTicket__V($thiz, f$1, t) {
+  $thiz.admit__O__Lrescala_core_AdmissionTicket__V(f$1.apply__O__O(t.now__Lrescala_core_Interp__O($thiz)), t)
+}
 /** @constructor */
 function $c_Lrescala_reactives_Var(initialState, name) {
   this.Lrescala_core_Base__f_state = null;
@@ -26788,6 +26827,14 @@ $c_Lrescala_reactives_Var.prototype.set__O__Lrescala_core_Scheduler__V = (functi
       $p_Lrescala_reactives_Var__$anonfun$set$1__O__Lrescala_core_AdmissionTicket__V(this\u00f8, value, x$3)
     })
   })(this, value)))
+});
+$c_Lrescala_reactives_Var.prototype.transform__F1__Lrescala_core_Scheduler__V = (function(f, fac) {
+  fac.forceNewTransaction__sci_Seq__F1__O($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([this]), new $c_sjsr_AnonFunction1((function(this\u00f8, f) {
+    return (function(t$2) {
+      var t = $as_Lrescala_core_AdmissionTicket(t$2);
+      $p_Lrescala_reactives_Var__$anonfun$transform$1__F1__Lrescala_core_AdmissionTicket__V(this\u00f8, f, t)
+    })
+  })(this, f)))
 });
 $c_Lrescala_reactives_Var.prototype.admitPulse__Lrescala_core_Pulse__Lrescala_core_AdmissionTicket__V = (function(pulse, ticket) {
   ticket.recordChange__Lrescala_core_InitialChange__V(new $c_Lrescala_reactives_Var$$anon$2(this, pulse))
@@ -32816,9 +32863,6 @@ function $h_sjsr_WrappedVarArgs() {
   /*<skip>*/
 }
 $h_sjsr_WrappedVarArgs.prototype = $c_sjsr_WrappedVarArgs.prototype;
-$c_sjsr_WrappedVarArgs.prototype.appended__O__O = (function(elem) {
-  return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
-});
 $c_sjsr_WrappedVarArgs.prototype.map__F1__O = (function(f) {
   return $f_sc_StrictOptimizedIterableOps__map__F1__O(this, f)
 });
@@ -33638,9 +33682,6 @@ function $h_sci_Range() {
   /*<skip>*/
 }
 $h_sci_Range.prototype = $c_sci_Range.prototype;
-$c_sci_Range.prototype.appended__O__O = (function(elem) {
-  return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
-});
 $c_sci_Range.prototype.strictOptimizedMap__scm_Builder__F1__O = (function(b, f) {
   return $f_sc_StrictOptimizedIterableOps__strictOptimizedMap__scm_Builder__F1__O(this, b, f)
 });
@@ -34965,9 +35006,6 @@ function $h_scm_ArraySeq() {
   /*<skip>*/
 }
 $h_scm_ArraySeq.prototype = $c_scm_ArraySeq.prototype;
-$c_scm_ArraySeq.prototype.appended__O__O = (function(elem) {
-  return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
-});
 $c_scm_ArraySeq.prototype.strictOptimizedMap__scm_Builder__F1__O = (function(b, f) {
   return $f_sc_StrictOptimizedIterableOps__strictOptimizedMap__scm_Builder__F1__O(this, b, f)
 });
@@ -35773,9 +35811,6 @@ $c_sci_Vector.prototype.equals__O__Z = (function(o) {
 });
 $c_sci_Vector.prototype.className__T = (function() {
   return "Vector"
-});
-$c_sci_Vector.prototype.appended__O__O = (function(elem) {
-  return this.appended__O__sci_Vector(elem)
 });
 $c_sci_Vector.prototype.tail__O = (function() {
   return this.tail__sci_Vector()
@@ -37589,9 +37624,6 @@ $c_scm_ListBuffer.prototype.sizeHint__I__V = (function(size) {
 $c_scm_ListBuffer.prototype.mapResult__F1__scm_Builder = (function(f) {
   return $f_scm_Builder__mapResult__F1__scm_Builder(this, f)
 });
-$c_scm_ListBuffer.prototype.appended__O__O = (function(elem) {
-  return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
-});
 $c_scm_ListBuffer.prototype.strictOptimizedMap__scm_Builder__F1__O = (function(b, f) {
   return $f_sc_StrictOptimizedIterableOps__strictOptimizedMap__scm_Builder__F1__O(this, b, f)
 });
@@ -37817,9 +37849,6 @@ function $h_scm_ArrayBuffer() {
   /*<skip>*/
 }
 $h_scm_ArrayBuffer.prototype = $c_scm_ArrayBuffer.prototype;
-$c_scm_ArrayBuffer.prototype.appended__O__O = (function(elem) {
-  return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
-});
 $c_scm_ArrayBuffer.prototype.strictOptimizedMap__scm_Builder__F1__O = (function(b, f) {
   return $f_sc_StrictOptimizedIterableOps__strictOptimizedMap__scm_Builder__F1__O(this, b, f)
 });
@@ -38021,9 +38050,6 @@ $c_sjs_js_WrappedArray.prototype.drop__I__O = (function(n) {
 $c_sjs_js_WrappedArray.prototype.lengthCompare__I__I = (function(len) {
   return $f_sc_IndexedSeqOps__lengthCompare__I__I(this, len)
 });
-$c_sjs_js_WrappedArray.prototype.appended__O__O = (function(elem) {
-  return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
-});
 $c_sjs_js_WrappedArray.prototype.strictOptimizedMap__scm_Builder__F1__O = (function(b, f) {
   return $f_sc_StrictOptimizedIterableOps__strictOptimizedMap__scm_Builder__F1__O(this, b, f)
 });
@@ -38208,9 +38234,6 @@ $c_scm_ArrayDeque.prototype.requireBounds$default$2__I = (function() {
 });
 $c_scm_ArrayDeque.prototype.copySliceToArray__I__O__I__I__O = (function(srcStart, dest, destStart, maxItems) {
   return $f_scm_ArrayDequeOps__copySliceToArray__I__O__I__I__O(this, srcStart, dest, destStart, maxItems)
-});
-$c_scm_ArrayDeque.prototype.appended__O__O = (function(elem) {
-  return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
 });
 $c_scm_ArrayDeque.prototype.strictOptimizedMap__scm_Builder__F1__O = (function(b, f) {
   return $f_sc_StrictOptimizedIterableOps__strictOptimizedMap__scm_Builder__F1__O(this, b, f)

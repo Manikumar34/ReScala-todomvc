@@ -14,29 +14,23 @@ object TodoService {
   private val toggleAllState = Var(false)
 
   def add(todo: Todo): Unit =
-    todos$.set(
-      todos$.now.appended(todo)
-    )
+    todos$.transform(_.appended(todo))
 
   def remove(id: UUID): Unit =
-    todos$.set(
-      todos$.now.filterNot(_.id == id)
-    )
+    todos$.transform(_.filterNot(_.id == id))
 
   def removeCompleted(): Unit =
-    todos$.set(
-      todos$.now.filterNot(_.completed)
-    )
+    todos$.transform(_.filterNot(_.completed))
 
   def toggleCompleted(todo: Todo): Unit =
-    todos$.set {
-      todos$.now.map(t => if (t.id == todo.id) todo.toggled else t)
+    todos$.transform {
+      _.map(t => if (t.id == todo.id) todo.toggled else t)
     }
 
   def toggleAll(): Unit = {
     toggleAllState.set(!toggleAllState.now)
-    todos$.set(
-      todos$.now.map(_.copy(completed = toggleAllState.now))
+    todos$.transform(
+      _.map(_.copy(completed = toggleAllState.now))
     )
   }
 }

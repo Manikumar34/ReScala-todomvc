@@ -65,12 +65,11 @@ case class TodoComponent(
 
   private def stopEditing(): Unit = {
     isEdit.set(false)
-    todos$.set {
-      val todos    = todos$.now
+    todos$.transform { todos =>
       val newValue = editInput.value.trim
       if (newValue.isEmpty) todos
       else {
-        todoVar.set(todoVar.now.copy(name = newValue))
+        todoVar.transform(_.copy(name = newValue))
         val todoIdx = todos.indexWhere(_.id == todo.id)
         todos.updated(todoIdx, todoVar.now)
       }
