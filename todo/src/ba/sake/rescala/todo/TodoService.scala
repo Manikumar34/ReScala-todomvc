@@ -4,6 +4,7 @@ import java.util.UUID
 
 import rescala.default._
 
+// TODO persist to localstorage
 object TodoService {
 
   val todos$ : Var[List[Todo]] = Var(

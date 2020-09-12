@@ -21,6 +21,8 @@ bin/
 .bloop/
 .metals/
 
+.vscode/
+
 null/
 
 out/

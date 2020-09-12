@@ -10,6 +10,9 @@ import scalatags.JsDom.all._
 
 // <input>s are decoupled from its callbacks via Events
 object MainComponent {
+  val todoFilter: Var[TodoFilter] = Var(TodoFilter.All)
+  private val todosFiltered$      = todos$.map(todos => todos.filter(todoFilter().isValid))
+
   private val addTodoEvent = Evt[KeyboardEvent]()
   addTodoEvent.observe(addTodo)
 
@@ -20,7 +23,7 @@ object MainComponent {
 
   private val mainDisplay = Signal { if (todos$().isEmpty) "none" else "block" }
 
-  private val countFrag = todos$.map { todos =>
+  private val countFrag = todosFiltered$.map { todos =>
     val count      = todos.count(!_.completed)
     val itemsLabel = if (count == 1) "item" else "items"
     div(strong(count), s" $itemsLabel left")
@@ -39,27 +42,18 @@ object MainComponent {
           }, id := "toggle-all", cls := "toggle-all", tpe := "checkbox"),
           label(`for` := "toggle-all", "Mark all as complete"),
           ul(cls := "todo-list")(
-            todos$.map {
+            todosFiltered$.map {
               _.map(TodoComponent).map(_.render)
             }.asModifierL
           )
         ),
         footer(cls := "footer", css("display") := mainDisplay)(
           span(cls := "todo-count")(countFrag),
-          // TODO
-          /*
           ul(cls := "filters")(
-            li(
-              a(cls := "selected", href := "#/", "All")
-            ),
-            li(
-              a(href := "#/active", "Active")
-            ),
-            li(
-              a(href := "#/completed", "Completed")
-            )
+            li(a(data.navigate := "/", "All", cls := maybeSelected(TodoFilter.All))),
+            li(a(data.navigate := "/active", "Active", cls := maybeSelected(TodoFilter.Active))),
+            li(a(data.navigate := "/completed", "Completed", cls := maybeSelected(TodoFilter.Completed)))
           ),
-           */
           button(onclick := { () =>
             TodoService.removeCompleted()
           }, cls := "clear-completed", "Clear completed")
@@ -78,5 +72,9 @@ object MainComponent {
       TodoService.add(Todo(newTodoName))
       addInput.value = ""
     }
+  }
+
+  private def maybeSelected(filter: TodoFilter) = Signal {
+    Option.when(todoFilter() == filter)("selected")
   }
 }

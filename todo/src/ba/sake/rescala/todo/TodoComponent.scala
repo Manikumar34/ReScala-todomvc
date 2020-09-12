@@ -13,12 +13,13 @@ case class TodoComponent(
   private val todoVar = Var(todo)
   private val isEdit  = Var(false)
 
-  private val startEditingEvent    = Evt[Unit]()
-  private val stopEditingEvent     = Evt[Unit]()
-  private val toggleCompletedEvent = Evt[Unit]()
-
+  private val startEditingEvent = Evt[Unit]()
   startEditingEvent.observe(_ => startEditing())
+
+  private val stopEditingEvent = Evt[Unit]()
   stopEditingEvent.observe(_ => stopEditing())
+
+  private val toggleCompletedEvent = Evt[Unit]()
   toggleCompletedEvent.observe(_ => TodoService.toggleCompleted(todo))
 
   private val editInput = input(
