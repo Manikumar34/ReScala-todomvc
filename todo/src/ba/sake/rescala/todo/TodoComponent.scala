@@ -35,7 +35,7 @@ case class TodoComponent(
   ).render
 
   def render = {
-    val todoName$    = Signal(span(todoVar().name))
+    val todoName$    = Signal(span(todoVar().name)).asModifier
     val isChecked    = Option.when(todo.completed)("checked")
     val completedCls = Option.when(todo.completed)("completed")
     val editingCls   = isEdit.map(v => Option.when(v)("editing"))
@@ -43,12 +43,12 @@ case class TodoComponent(
 
     li(cls := liClasses)(
       div(cls := "view")(
-        input(checked := isChecked, onchange := { () =>
+        input(onchange := { () =>
           toggleCompletedEvent.fire()
-        }, cls := "toggle", tpe := "checkbox"),
+        }, checked := isChecked, cls := "toggle", tpe := "checkbox"),
         label(ondblclick := { () =>
           startEditingEvent.fire()
-        })(todoName$.asModifier),
+        })(todoName$),
         button(onclick := { () =>
           TodoService.remove(todo.id)
         }, cls := "destroy")

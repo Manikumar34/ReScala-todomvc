@@ -1208,17 +1208,20 @@ function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleCompleted$1__Lba_
     })
   })($thiz, todo$2)))
 }
-function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$2__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo($thiz, x$8) {
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$1__Z__Z($thiz, s) {
+  return (!s)
+}
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$3__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo($thiz, x$8) {
   var x$1 = $uZ($p_Lba_sake_rescala_todo_TodoService$__toggleAllState__Lrescala_reactives_Var($m_Lba_sake_rescala_todo_TodoService$()).now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()));
   var x$2 = x$8.copy$default$1__T();
   var x$3 = x$8.copy$default$3__ju_UUID();
   return x$8.copy__T__Z__ju_UUID__Lba_sake_rescala_todo_Todo(x$2, x$1, x$3)
 }
-function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$1__sci_List__sci_List($thiz, x$7) {
+function $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$2__sci_List__sci_List($thiz, x$7) {
   return x$7.map__F1__sci_List(new $c_sjsr_AnonFunction1((function(this\u00f8) {
     return (function(x$8$2) {
       var x$8 = $as_Lba_sake_rescala_todo_Todo(x$8$2);
-      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$2__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo(this\u00f8, x$8)
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$3__Lba_sake_rescala_todo_Todo__Lba_sake_rescala_todo_Todo(this\u00f8, x$8)
     })
   })($thiz)))
 }
@@ -1274,11 +1277,16 @@ $c_Lba_sake_rescala_todo_TodoService$.prototype.toggleCompleted__Lba_sake_rescal
   })(this, todo)), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
 });
 $c_Lba_sake_rescala_todo_TodoService$.prototype.toggleAll__V = (function() {
-  $p_Lba_sake_rescala_todo_TodoService$__toggleAllState__Lrescala_reactives_Var(this).set__O__Lrescala_core_Scheduler__V((!$uZ($p_Lba_sake_rescala_todo_TodoService$__toggleAllState__Lrescala_reactives_Var(this).now__Lrescala_core_Scheduler__O($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()))), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler());
-  this.todos$__Lrescala_reactives_Var().transform__F1__Lrescala_core_Scheduler__V(new $c_sjsr_AnonFunction1((function(this\u00f8) {
+  $p_Lba_sake_rescala_todo_TodoService$__toggleAllState__Lrescala_reactives_Var(this).transform__F1__Lrescala_core_Scheduler__V(new $c_sjsr_AnonFunction1((function(this\u00f8) {
+    return (function(s$2) {
+      var s = $uZ(s$2);
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$1__Z__Z(this\u00f8, s)
+    })
+  })(this)), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler());
+  this.todos$__Lrescala_reactives_Var().transform__F1__Lrescala_core_Scheduler__V(new $c_sjsr_AnonFunction1((function(this$2) {
     return (function(x$7$2) {
       var x$7 = $as_sci_List(x$7$2);
-      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$1__sci_List__sci_List(this\u00f8, x$7)
+      return $p_Lba_sake_rescala_todo_TodoService$__$anonfun$toggleAll$2__sci_List__sci_List(this$2, x$7)
     })
   })(this)), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())
 });
@@ -16360,12 +16368,12 @@ $c_Lba_sake_rescala_todo_TodoComponent.prototype.todo__Lba_sake_rescala_todo_Tod
   return this.Lba_sake_rescala_todo_TodoComponent__f_todo
 });
 $c_Lba_sake_rescala_todo_TodoComponent.prototype.render__Lscalatags_JsDom$TypedTag = (function() {
-  var todoName$ = $m_Lrescala_reactives_Signals$().static__sci_Seq__F1__Lrescala_core_CreationTicket__Lrescala_reactives_Signal($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$p_Lba_sake_rescala_todo_TodoComponent__todoVar__Lrescala_reactives_Var(this)]), new $c_sjsr_AnonFunction1((function(this\u00f8) {
+  var todoName$ = $m_Lrescala_extra_Tags$SignalToScalatags$().asModifier$extension__Lrescala_reactives_Signal__Lrescala_core_Scheduler__Lscalatags_generic_Modifier($m_Lrescala_extra_Tags$().SignalToScalatags__Lrescala_reactives_Signal__Lrescala_reactives_Signal($m_Lrescala_reactives_Signals$().static__sci_Seq__F1__Lrescala_core_CreationTicket__Lrescala_reactives_Signal($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$p_Lba_sake_rescala_todo_TodoComponent__todoVar__Lrescala_reactives_Var(this)]), new $c_sjsr_AnonFunction1((function(this\u00f8) {
     return (function(ticket$macro$1$2) {
       var ticket$macro$1 = $as_Lrescala_core_StaticTicket(ticket$macro$1$2);
       return $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$render$1__Lrescala_core_StaticTicket__Lscalatags_JsDom$TypedTag(this\u00f8, ticket$macro$1)
     })
-  })(this)), $m_Lrescala_core_CreationTicket$().fromEngineImplicit__Lrescala_core_Scheduler__Lrescala_core_REName__Lrescala_core_CreationTicket($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler(), $m_Lrescala_core_REName$().create__Lsourcecode_Enclosing__Lsourcecode_Line__Lrescala_core_REName(new $c_Lsourcecode_Enclosing("ba.sake.rescala.todo.TodoComponent#render todoName$"), new $c_Lsourcecode_Line(38))));
+  })(this)), $m_Lrescala_core_CreationTicket$().fromEngineImplicit__Lrescala_core_Scheduler__Lrescala_core_REName__Lrescala_core_CreationTicket($m_Lrescala_default$().scheduler__Lrescala_core_Scheduler(), $m_Lrescala_core_REName$().create__Lsourcecode_Enclosing__Lsourcecode_Line__Lrescala_core_REName(new $c_Lsourcecode_Enclosing("ba.sake.rescala.todo.TodoComponent#render todoName$"), new $c_Lsourcecode_Line(38))))), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler());
   var isChecked = $m_s_Option$().when__Z__F0__s_Option(this.todo__Lba_sake_rescala_todo_Todo().completed__Z(), new $c_sjsr_AnonFunction0((function(this$2) {
     return (function() {
       return $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$render$2__T(this$2)
@@ -16407,7 +16415,7 @@ $c_Lba_sake_rescala_todo_TodoComponent.prototype.render__Lscalatags_JsDom$TypedT
       var f$3 = $as_F0(f$3$2);
       return $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$render$13__F0__sjs_js_Function0(this$9, f$3)
     })
-  })(this))))])).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lrescala_extra_Tags$SignalToScalatags$().asModifier$extension__Lrescala_reactives_Signal__Lrescala_core_Scheduler__Lscalatags_generic_Modifier($m_Lrescala_extra_Tags$().SignalToScalatags__Lrescala_reactives_Signal__Lrescala_reactives_Signal(todoName$), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler())])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().button__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().onclick__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(new $c_sjsr_AnonFunction0((function(this$10) {
+  })(this))))])).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([todoName$])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().button__Lscalatags_generic_TypedTag()).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sjsr_package$().toScalaVarArgs__sjs_js_Array__sci_Seq([$m_Lscalatags_JsDom$all$().onclick__Lscalatags_generic_Attr().$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(new $c_sjsr_AnonFunction0((function(this$10) {
     return (function() {
       $p_Lba_sake_rescala_todo_TodoComponent__$anonfun$render$14__V(this$10)
     })

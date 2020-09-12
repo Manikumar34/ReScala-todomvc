@@ -28,7 +28,7 @@ object TodoService {
     }
 
   def toggleAll(): Unit = {
-    toggleAllState.set(!toggleAllState.now)
+    toggleAllState.transform(s => !s)
     todos$.transform(
       _.map(_.copy(completed = toggleAllState.now))
     )
