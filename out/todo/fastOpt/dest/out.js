@@ -1068,7 +1068,7 @@ function $h_Lba_sake_rescala_todo_TodoApp$() {
 $h_Lba_sake_rescala_todo_TodoApp$.prototype = $c_Lba_sake_rescala_todo_TodoApp$.prototype;
 $c_Lba_sake_rescala_todo_TodoApp$.prototype.main__AT__V = (function(args) {
   $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().getElementById("main").appendChild($m_Lba_sake_rescala_todo_MainComponent$().render__Lorg_scalajs_dom_raw_HTMLDivElement());
-  $m_Lba_sake_scalajs\uff3frouter_Router$().apply__Lba_sake_scalajs\uff3frouter_Router().withListener__s_PartialFunction__Lba_sake_scalajs\uff3frouter_Router(new $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1())
+  $m_Lba_sake_scalajs\uff3frouter_Router$().apply__Lba_sake_scalajs\uff3frouter_Router().withListener__s_PartialFunction__Lba_sake_scalajs\uff3frouter_Router(new $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1()).init__V()
 });
 var $d_Lba_sake_rescala_todo_TodoApp$ = new $TypeData().initClass({
   Lba_sake_rescala_todo_TodoApp$: 0
@@ -1339,16 +1339,6 @@ function $asArrayOf_Lba_sake_scalajs\uff3frouter_Component(obj, depth) {
 function $p_Lba_sake_scalajs\uff3frouter_Router__maybeMountElement__s_Option($thiz) {
   return $thiz.Lba_sake_scalajs\uff3frouter_Router__f_maybeMountElement
 }
-function $p_Lba_sake_scalajs\uff3frouter_Router__init__V($thiz) {
-  $p_Lba_sake_scalajs\uff3frouter_Router__refresh__V($thiz);
-  $p_Lba_sake_scalajs\uff3frouter_Router__attachNavListeners__V($thiz);
-  $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().addEventListener("popstate", (function(arg$outer) {
-    return (function(arg1$2) {
-      var arg1 = arg1$2;
-      arg$outer.ba$sake$scalajs_router$Router$$$anonfun$init$1__Lorg_scalajs_dom_raw_PopStateEvent__V(arg1)
-    })
-  })($thiz), false)
-}
 function $p_Lba_sake_scalajs\uff3frouter_Router__refresh__V($thiz) {
   var newUrl = (("" + $as_T($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().location.pathname)) + $as_T($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().location.search));
   $thiz.Lba_sake_scalajs\uff3frouter_Router__f_routesData.foreach__F1__V(new $c_sjsr_AnonFunction1((function(this\u00f8, newUrl) {
@@ -1400,10 +1390,12 @@ function $p_Lba_sake_scalajs\uff3frouter_Router__$anonfun$attachNavListeners$1__
   })($thiz))
 }
 /** @constructor */
-function $c_Lba_sake_scalajs\uff3frouter_Router(routesData, routeListener) {
+function $c_Lba_sake_scalajs\uff3frouter_Router(baseUrl, routesData, routeListener) {
+  this.Lba_sake_scalajs\uff3frouter_Router__f_baseUrl = null;
   this.Lba_sake_scalajs\uff3frouter_Router__f_routesData = null;
   this.Lba_sake_scalajs\uff3frouter_Router__f_routeListener = null;
   this.Lba_sake_scalajs\uff3frouter_Router__f_maybeMountElement = null;
+  this.Lba_sake_scalajs\uff3frouter_Router__f_baseUrl = baseUrl;
   this.Lba_sake_scalajs\uff3frouter_Router__f_routesData = routesData;
   this.Lba_sake_scalajs\uff3frouter_Router__f_routeListener = routeListener;
   $ct_O__(this);
@@ -1412,8 +1404,7 @@ function $c_Lba_sake_scalajs\uff3frouter_Router(routesData, routeListener) {
       var rd = $as_Lba_sake_scalajs\uff3frouter_Router$RoutesData(rd$2);
       return $p_Lba_sake_scalajs\uff3frouter_Router__$anonfun$maybeMountElement$1__Lba_sake_scalajs\uff3frouter_Router$RoutesData__Lorg_scalajs_dom_raw_Element(this\u00f8, rd)
     })
-  })(this)));
-  $p_Lba_sake_scalajs\uff3frouter_Router__init__V(this)
+  })(this)))
 }
 $c_Lba_sake_scalajs\uff3frouter_Router.prototype = new $h_O();
 $c_Lba_sake_scalajs\uff3frouter_Router.prototype.constructor = $c_Lba_sake_scalajs\uff3frouter_Router;
@@ -1423,11 +1414,22 @@ function $h_Lba_sake_scalajs\uff3frouter_Router() {
 }
 $h_Lba_sake_scalajs\uff3frouter_Router.prototype = $c_Lba_sake_scalajs\uff3frouter_Router.prototype;
 $c_Lba_sake_scalajs\uff3frouter_Router.prototype.withListener__s_PartialFunction__Lba_sake_scalajs\uff3frouter_Router = (function(routeListener) {
-  return new $c_Lba_sake_scalajs\uff3frouter_Router(this.Lba_sake_scalajs\uff3frouter_Router__f_routesData, new $c_s_Some(routeListener))
+  return new $c_Lba_sake_scalajs\uff3frouter_Router(this.Lba_sake_scalajs\uff3frouter_Router__f_baseUrl, this.Lba_sake_scalajs\uff3frouter_Router__f_routesData, new $c_s_Some(routeListener))
 });
 $c_Lba_sake_scalajs\uff3frouter_Router.prototype.navigateTo__T__V = (function(path) {
-  $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().history.pushState(null, null, path);
+  var newUrl = (("" + this.Lba_sake_scalajs\uff3frouter_Router__f_baseUrl) + path);
+  $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().history.pushState(null, null, newUrl);
   $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().dispatchEvent(new Event("popstate"))
+});
+$c_Lba_sake_scalajs\uff3frouter_Router.prototype.init__V = (function() {
+  $p_Lba_sake_scalajs\uff3frouter_Router__refresh__V(this);
+  $p_Lba_sake_scalajs\uff3frouter_Router__attachNavListeners__V(this);
+  $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().addEventListener("popstate", (function(arg$outer) {
+    return (function(arg1$2) {
+      var arg1 = arg1$2;
+      arg$outer.ba$sake$scalajs_router$Router$$$anonfun$init$1__Lorg_scalajs_dom_raw_PopStateEvent__V(arg1)
+    })
+  })(this), false)
 });
 $c_Lba_sake_scalajs\uff3frouter_Router.prototype.ba$sake$scalajs_router$Router$$$anonfun$init$1__Lorg_scalajs_dom_raw_PopStateEvent__V = (function(evt) {
   $p_Lba_sake_scalajs\uff3frouter_Router__refresh__V(this)
@@ -1443,6 +1445,15 @@ var $d_Lba_sake_scalajs\uff3frouter_Router = new $TypeData().initClass({
   O: 1
 });
 $c_Lba_sake_scalajs\uff3frouter_Router.prototype.$classData = $d_Lba_sake_scalajs\uff3frouter_Router;
+function $p_Lba_sake_scalajs\uff3frouter_Router$__$lessinit$greater$default$1__T($thiz) {
+  return ""
+}
+function $p_Lba_sake_scalajs\uff3frouter_Router$__$lessinit$greater$default$2__s_Option($thiz) {
+  return $m_s_None$()
+}
+function $p_Lba_sake_scalajs\uff3frouter_Router$__$lessinit$greater$default$3__s_Option($thiz) {
+  return $m_s_None$()
+}
 /** @constructor */
 function $c_Lba_sake_scalajs\uff3frouter_Router$() {
   $ct_O__(this);
@@ -1456,7 +1467,7 @@ function $h_Lba_sake_scalajs\uff3frouter_Router$() {
 }
 $h_Lba_sake_scalajs\uff3frouter_Router$.prototype = $c_Lba_sake_scalajs\uff3frouter_Router$.prototype;
 $c_Lba_sake_scalajs\uff3frouter_Router$.prototype.apply__Lba_sake_scalajs\uff3frouter_Router = (function() {
-  return new $c_Lba_sake_scalajs\uff3frouter_Router($m_s_None$(), $m_s_None$())
+  return new $c_Lba_sake_scalajs\uff3frouter_Router($p_Lba_sake_scalajs\uff3frouter_Router$__$lessinit$greater$default$1__T($m_Lba_sake_scalajs\uff3frouter_Router$()), $p_Lba_sake_scalajs\uff3frouter_Router$__$lessinit$greater$default$2__s_Option($m_Lba_sake_scalajs\uff3frouter_Router$()), $p_Lba_sake_scalajs\uff3frouter_Router$__$lessinit$greater$default$3__s_Option($m_Lba_sake_scalajs\uff3frouter_Router$()))
 });
 var $d_Lba_sake_scalajs\uff3frouter_Router$ = new $TypeData().initClass({
   Lba_sake_scalajs\uff3frouter_Router$: 0
