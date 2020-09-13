@@ -1,17 +1,16 @@
 package ba.sake.rescala.todo
 
 import java.util.UUID
-
+import org.scalajs.dom
 import rescala.default._
+import upickle.default._
 
-// TODO persist to localstorage
 object TodoService {
-
-  val todos$ : Var[List[Todo]] = Var(
-    List(Todo("Create a TodoMVC template", completed = true), Todo("Rule the web"))
-  )
+  private val TodosKey = "TODOS"
 
   private val toggleAllState = Var(false)
+
+  val todos$ : Var[List[Todo]] = initTodos()
 
   def add(todo: Todo): Unit =
     todos$.transform(_.appended(todo))
@@ -32,5 +31,19 @@ object TodoService {
     todos$.transform(
       _.map(_.copy(completed = toggleAllState.now))
     )
+  }
+
+  private def initTodos() = {
+    val savedTodosJson = dom.window.localStorage.getItem(TodosKey)
+    val todos =
+      if (savedTodosJson == null)
+        List(Todo("Create a TodoMVC template", completed = true), Todo("Rule the web"))
+      else read[List[Todo]](savedTodosJson)
+
+    val initTodos$ = Var(todos)
+    initTodos$.observe { newValue =>
+      dom.window.localStorage.setItem(TodosKey, write(newValue))
+    }
+    initTodos$
   }
 }

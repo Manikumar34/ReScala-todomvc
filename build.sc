@@ -13,6 +13,7 @@ object todo extends ScalaJSModule {
   def ivyDeps = Agg(
     ivy"com.lihaoyi::scalatags::0.8.6",
     ivy"de.tuda.stg::rescala::0.30.0",
+    ivy"com.lihaoyi::upickle::1.2.0",
     ivy"ba.sake::router::0.0.2"
   )
 
