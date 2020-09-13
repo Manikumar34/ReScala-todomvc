@@ -9,7 +9,7 @@ object TodoApp {
   def main(args: Array[String]): Unit = {
     dom.document.getElementById("main").appendChild(MainComponent.render)
 
-    Router().withListener {
+    Router().withBaseUrl("/ReScala-todomvc").withListener {
       case "/active"    => MainComponent.todoFilter.set(TodoFilter.Active)
       case "/completed" => MainComponent.todoFilter.set(TodoFilter.Completed)
       case _            => MainComponent.todoFilter.set(TodoFilter.All)
