@@ -14,7 +14,7 @@ object todo extends ScalaJSModule {
     ivy"de.tuda.stg::rescala::0.30.0",
     ivy"com.lihaoyi::scalatags::0.8.6",
     ivy"com.lihaoyi::upickle::1.2.0",
-    ivy"ba.sake::scalajs-router::0.0.4"
+    ivy"ba.sake::scalajs-router::0.0.5"
   )
 
   def repositories = super.repositories ++ Seq(

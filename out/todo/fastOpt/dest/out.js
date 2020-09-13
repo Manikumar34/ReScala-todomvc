@@ -1341,7 +1341,6 @@ function $p_Lba_sake_scalajs\uff3frouter_Router__maybeMountElement__s_Option($th
 }
 function $p_Lba_sake_scalajs\uff3frouter_Router__refresh__V($thiz) {
   var newUrl = (("" + $m_sc_StringOps$().drop$extension__T__I__T($m_s_Predef$().augmentString__T__T($as_T($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().location.pathname)), $f_T__length__I($thiz.Lba_sake_scalajs\uff3frouter_Router__f_baseUrl))) + $as_T($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().location.search));
-  $m_s_Predef$().println__O__V(("New: " + newUrl));
   $thiz.Lba_sake_scalajs\uff3frouter_Router__f_routesData.foreach__F1__V(new $c_sjsr_AnonFunction1((function(this\u00f8, newUrl) {
     return (function(rd$2) {
       var rd = $as_Lba_sake_scalajs\uff3frouter_Router$RoutesData(rd$2);
@@ -31537,7 +31536,7 @@ function $h_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1() {
 $h_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1.prototype = $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1.prototype;
 $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1.prototype.applyOrElse__T__F1__O = (function(x1, default\u00f8) {
   var x1$2 = x1;
-  return ($is("/active", x1$2) ? ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$().Active__Lba_sake_rescala_todo_TodoFilter(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), (void 0)) : ($is("/completed", x1$2) ? ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$().Completed__Lba_sake_rescala_todo_TodoFilter(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), (void 0)) : ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$().All__Lba_sake_rescala_todo_TodoFilter(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), $m_s_Predef$().println__O__V("NOT FOUNDDDDDDD"), (void 0))))
+  return ($is("/active", x1$2) ? ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$().Active__Lba_sake_rescala_todo_TodoFilter(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), (void 0)) : ($is("/completed", x1$2) ? ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$().Completed__Lba_sake_rescala_todo_TodoFilter(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), (void 0)) : ($m_Lba_sake_rescala_todo_MainComponent$().todoFilter__Lrescala_reactives_Var().set__O__Lrescala_core_Scheduler__V($m_Lba_sake_rescala_todo_TodoFilter$().All__Lba_sake_rescala_todo_TodoFilter(), $m_Lrescala_default$().scheduler__Lrescala_core_Scheduler()), (void 0))))
 });
 $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1.prototype.isDefinedAt__T__Z = (function(x1) {
   var x1$2 = x1;
