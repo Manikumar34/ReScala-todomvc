@@ -1068,7 +1068,7 @@ function $h_Lba_sake_rescala_todo_TodoApp$() {
 $h_Lba_sake_rescala_todo_TodoApp$.prototype = $c_Lba_sake_rescala_todo_TodoApp$.prototype;
 $c_Lba_sake_rescala_todo_TodoApp$.prototype.main__AT__V = (function(args) {
   $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().getElementById("main").appendChild($m_Lba_sake_rescala_todo_MainComponent$().render__Lorg_scalajs_dom_raw_HTMLDivElement());
-  $m_Lba_sake_scalajs\uff3frouter_Router$().apply__Lba_sake_scalajs\uff3frouter_Router().withListener__s_PartialFunction__Lba_sake_scalajs\uff3frouter_Router(new $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1()).init__V()
+  $m_Lba_sake_scalajs\uff3frouter_Router$().apply__Lba_sake_scalajs\uff3frouter_Router().withBaseUrl__T__Lba_sake_scalajs\uff3frouter_Router("/ReScala-todomvc").withListener__s_PartialFunction__Lba_sake_scalajs\uff3frouter_Router(new $c_Lba_sake_rescala_todo_TodoApp$$anonfun$main$1()).init__V()
 });
 var $d_Lba_sake_rescala_todo_TodoApp$ = new $TypeData().initClass({
   Lba_sake_rescala_todo_TodoApp$: 0
@@ -1413,6 +1413,9 @@ function $h_Lba_sake_scalajs\uff3frouter_Router() {
   /*<skip>*/
 }
 $h_Lba_sake_scalajs\uff3frouter_Router.prototype = $c_Lba_sake_scalajs\uff3frouter_Router.prototype;
+$c_Lba_sake_scalajs\uff3frouter_Router.prototype.withBaseUrl__T__Lba_sake_scalajs\uff3frouter_Router = (function(baseUrl) {
+  return new $c_Lba_sake_scalajs\uff3frouter_Router(baseUrl, this.Lba_sake_scalajs\uff3frouter_Router__f_routesData, this.Lba_sake_scalajs\uff3frouter_Router__f_routeListener)
+});
 $c_Lba_sake_scalajs\uff3frouter_Router.prototype.withListener__s_PartialFunction__Lba_sake_scalajs\uff3frouter_Router = (function(routeListener) {
   return new $c_Lba_sake_scalajs\uff3frouter_Router(this.Lba_sake_scalajs\uff3frouter_Router__f_baseUrl, this.Lba_sake_scalajs\uff3frouter_Router__f_routesData, new $c_s_Some(routeListener))
 });
