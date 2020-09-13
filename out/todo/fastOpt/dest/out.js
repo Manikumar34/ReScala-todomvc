@@ -1340,7 +1340,7 @@ function $p_Lba_sake_scalajs\uff3frouter_Router__maybeMountElement__s_Option($th
   return $thiz.Lba_sake_scalajs\uff3frouter_Router__f_maybeMountElement
 }
 function $p_Lba_sake_scalajs\uff3frouter_Router__refresh__V($thiz) {
-  var newUrl = (("" + $as_T($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().location.pathname)) + $as_T($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().location.search));
+  var newUrl = (("" + $m_sc_StringOps$().take$extension__T__I__T($m_s_Predef$().augmentString__T__T($as_T($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().location.pathname)), $f_T__length__I($thiz.Lba_sake_scalajs\uff3frouter_Router__f_baseUrl))) + $as_T($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().location.search));
   $thiz.Lba_sake_scalajs\uff3frouter_Router__f_routesData.foreach__F1__V(new $c_sjsr_AnonFunction1((function(this\u00f8, newUrl) {
     return (function(rd$2) {
       var rd = $as_Lba_sake_scalajs\uff3frouter_Router$RoutesData(rd$2);
@@ -6399,6 +6399,9 @@ $c_sc_StringOps$.prototype.format$extension__T__sci_Seq__T = (function(this$, ar
 });
 $c_sc_StringOps$.prototype.nonEmpty$extension__T__Z = (function(this$) {
   return (!$f_T__isEmpty__Z(this$))
+});
+$c_sc_StringOps$.prototype.take$extension__T__I__T = (function(this$, n) {
+  return $m_sc_StringOps$().slice$extension__T__I__I__T(this$, 0, $m_s_math_package$().min__I__I__I(n, $f_T__length__I(this$)))
 });
 $c_sc_StringOps$.prototype.drop$extension__T__I__T = (function(this$, n) {
   return $m_sc_StringOps$().slice$extension__T__I__I__T(this$, $m_s_math_package$().min__I__I__I(n, $f_T__length__I(this$)), $f_T__length__I(this$))
